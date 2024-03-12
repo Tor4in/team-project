@@ -9,14 +9,16 @@ header {
 	align-items: center;
 	justify-content: space-between;
 }
-
+:root{
+	--hheigth: 59px;
+}
 nav {
 	width: 100%;
 	border-bottom: 1px solid #2E3545;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 59px;
+	height: var(--hheigth);
 }
 .buttons{
 	display: flex;
@@ -72,4 +74,64 @@ nav {
 .fone_icon{
 	align-self: start;
 	margin: 2rem;
+}
+.burger_wraper{
+	position: relative;
+	.burger > .footer_manu{
+		height: auto !important;
+		top: 0 !important;
+		display: flex;
+		flex-direction: column;
+		span{
+			background-color: #151B28;
+			width: 100%;
+			text-align: center;
+			padding: 4rem 0;
+			font-size: 1.3rem;
+			p{
+				color: #a2a2a2;
+			}
+		}
+	}
+	.burger > .burger_manu{
+		position: absolute;
+		top: var(--hheigth);
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.manu{
+			padding: 2rem;
+			width: 100%;
+			height: 100%;
+			background-color: #151B28;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 2rem;
+			text-align: center;
+			li{ 
+				font-size: 2rem;
+				a, a:visited{
+					color: white;
+					text-decoration: none;
+	
+				}
+				.underText{
+					color: #A5ACBA;
+					line-height: 5;
+					font-size: 1.3rem;
+				}
+			}
+			transition: .5s ease-in-out;
+			transform: translateY(100vh);
+			list-style-type: none;
+	
+			&.open{
+				transform: translateY(0);
+			}
+		}
+	}
 }

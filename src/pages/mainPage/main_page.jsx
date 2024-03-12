@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import firstImage from "./images/slider_image_1.png";
 import secondImage from "./images/slider_image_2.png";
 import thirdImage from "./images/slider_image_3.png";
+import { Footer } from "../../components/footer/footer";
 export default function MainPage() {
   return (
     <>
@@ -42,6 +43,7 @@ export default function MainPage() {
           </div>
         ))}
       </div>
+			<Footer />
     </>
   );
 }
